@@ -47,12 +47,13 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Repo", "https://www.github.com/anasty17/mirror-leech-telegram-bot")
-    buttons.buildbutton("Owner", "https://www.github.com/anasty17")
+    buttons.buildbutton("പത്രം", "https://github.com/DevAXD/DevAXD")
+    buttons.buildbutton("ഉടമ", "https://t.me/slogan_98")
     reply_markup = buttons.build_menu(2)
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-This bot can mirror all your links to Google Drive or to telegram!
+ബേസ്ക്കൽ കോട്ടയുടെ ശക്തി എന്നുള്ളിൽ ഉറങ്ങുമാശക്തി കൂടി വാ ... 
+NOTE : നല്ലത് മാത്രം അയക്കണേ ..
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
